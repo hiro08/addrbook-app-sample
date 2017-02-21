@@ -1,0 +1,1 @@
+json.array! @addrbooks, partial: 'addrbooks/addrbook', as: :addrbook

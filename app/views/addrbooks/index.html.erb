@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Addrbooks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Kana</th>
+      <th>Postal code</th>
+      <th>Address</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @addrbooks.each do |addrbook| %>
+      <tr>
+        <td><%= addrbook.code %></td>
+        <td><%= addrbook.name %></td>
+        <td><%= addrbook.kana %></td>
+        <td><%= addrbook.postal_code %></td>
+        <td><%= addrbook.address %></td>
+        <td><%= link_to 'Show', addrbook %></td>
+        <td><%= link_to 'Edit', edit_addrbook_path(addrbook) %></td>
+        <td><%= link_to 'Destroy', addrbook, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Addrbook', new_addrbook_path %>

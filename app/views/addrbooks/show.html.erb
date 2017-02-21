@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @addrbook.code %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @addrbook.name %>
+</p>
+
+<p>
+  <strong>Kana:</strong>
+  <%= @addrbook.kana %>
+</p>
+
+<p>
+  <strong>Postal code:</strong>
+  <%= @addrbook.postal_code %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @addrbook.address %>
+</p>
+
+<%= link_to 'Edit', edit_addrbook_path(@addrbook) %> |
+<%= link_to 'Back', addrbooks_path %>
